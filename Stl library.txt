@@ -1,0 +1,204 @@
+					
+					STL
+				--------------------
+
+	Vector
+      ----------
+
+1. v.emplace(v.begin() + 1 , 16);  { Push element in vector at any position }
+
+2. v.clear();  { delete all elements in vector. ie, size of vector is equeal to zero }
+
+3. v.erase(v.begin()+1);  { delete element at any position in vector }
+
+4. v.erase(v.begin(),v.end()-1);  { delete a set of elements in vector }
+
+5. sum=accumulate(a , a+3 , initial_sum);  { return sum of elements + initial_sum }
+
+
+
+	SET
+    ------------
+
+
+1. No duplicates and data are in sorted order
+
+2. set<int>s;          { declearation }
+
+3. for(auto i=s.begin();i!=s.end();i++)
+    cout<<*i<<" ";
+
+4. for(auto i:s)
+    cout<<i<<" ";
+
+5. s.begin()           { starting iterater } 
+
+6. s.end()     	       { lsat iterater }
+
+7. s.insert(ele)       { insert element in set }
+
+8. s.emplace(ele)      { insert element in set }
+
+9. s.size()            { return length of set }
+
+10. s.clear()  	       { delete all elements in a set }
+
+11. s.lower_bound(ele) { return iterator of lower bound if present else return iterator of last element }
+
+12. s.upper_bound(ele) { return iterator of upper bound if present else return iterator of last element }
+
+13. s.find(ele)        { return iterator of that element if present else return iterator of last element }
+
+14. s.erase(ele)       { delete element from set s }
+
+15. s.erase(s.begin(),s.find(ele)) { delete element till ele not found }
+
+
+
+	MultiSet
+     --------------
+
+
+1. Data are in shorted order 
+
+2. multiset<int>s;          { declearation }
+
+3. Multisets are similar to set, with an exception that multiple elements can have same values.3
+
+4. s.count(ele)  { return count of ele element present in set s }
+
+4. s.erase(s.find(ele))  { delete one element is deleted when element present }
+
+	
+	Unordered_set
+   -------------------------
+
+1. Data are in rendom order.
+
+
+
+	Map
+   ---------------
+
+1. Map<int,int>m;   { declearation }
+
+2. Sorted in key wise and unique. All operation is work on key not on value.
+
+3. for (auto itr= m.begin(); itr != m.end(); ++itr) 
+        cout<<itr->first<<" "<<itr->second<<endl;
+
+4. m[key]=value  { insert element }
+
+5. m.insert(pair<key, value>(8, 5));  { insert pare wise if key is not present only override is never happen. it only updated using 'm[key]=value' }
+
+6. m.emplace(key,value)  { insert element in map if key is not present only override is never happen. it only  updated using 'm[key]=value' }
+
+7. m.size()  { return size }
+
+8. m.clear() { remove all elements }
+
+9. m.erase(key) { erese element of key value key }
+
+10. m.find(key)  { return iterature of that element }
+
+11. m.erase(itr)  { delete iterator element }
+
+12. m.count(key)  { return 1 if present else return 0 }
+
+
+
+
+	Multimap
+    ------------------
+
+1. multimap<int,int>m;  { declearation }
+
+2. 2. Sorted in key wise but not unique. All operation is work on key not on value.
+
+3. for(auto i=m.begin();i!=m.end();i++)
+    cout<<i->first<<" "<<i->second<<endl;
+
+4. m.insert(pair<key, value>(key, value));  { insert element }
+
+5. m.insert({key , value});  { insert element }
+
+6. m.emplace(key , value);  { insert element }
+
+7. m.erase(key)  { delete all value of same key }
+
+8. m.erase(m.find(key))  { delete only one key (inserted 1st) if multiple key are present }
+
+
+	Unordered_map
+    ----------------------
+
+1. Data are in random ordered.
+
+
+	List
+    -------------
+
+1. list<int>l;  { declearation }
+
+2. for(auto i=l1.begin();i!=l1.end();i++)
+    cout<<*i<<" ";
+
+3. for(auto i:l1)
+    cout<<i<<" ";
+
+4.  l.assign(number_of_times,val), l.front(), l.back(), l.empty(), l.size(), l.clear(), l.insert(itr,val), 	     l.emplace(itr,val), l.push_back(), l.pop_back(), l.push_front(), l.pop_front(), l.reverse(), l.sort(), 	        l1.merge(l2), l1.splice(l1.begin(),l2), l.remove(ele), l.remove_if(ele%2==0), l.resize(0,4)
+ 
+
+	Pair
+    -------------
+
+1.pair (data_type1, data_type2) Pair_name (value1, value2) ;
+
+2. pair  g1;         //default
+
+3. pair  g2(1, 'a');  //initialized,  different data type
+
+4. pair  g3(1, 10);   //initialized,  same data type
+
+5. pair  g4(g3);    //copy of g3
+
+6. g2 = make_pair(1, 'a');
+
+7. g2 = {1, 'a'};
+
+
+	Priority Queue
+    ----------------------
+
+1. Data are in sorted order in non increasing order.
+
+2. priority_queue<int>q
+
+3. push(), pop(), front(),back(), swap(q1,q2), top(), size(), empty() 
+
+
+--------------------------------------
+
+1. is_sorted(v.begin()+1,v.end())  { return 1 if array is sorted in range else return 0 }
+
+2. partial_sort(v.begin(), v.begin() + 4, v.end())
+
+3. nth_element(v, v + i, v + n); { all element left of ith element is small and right of ith element is greater }
+
+4. cout<<*is_sorted_until(v.begin(), v.end())  { return 1st unsorted element }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
